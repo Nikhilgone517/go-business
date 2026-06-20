@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Navbar from "../../components/Navbar";
 import Overview from "../../components/Overview";
@@ -8,11 +7,9 @@ import ServiceSummary from "../../components/ServiceSummary";
 import ReferAndEarn from "../../components/ReferAndEarn";
 import AllReferrals from "../../components/AllReferrals";
 import Footer from "../../components/Footer";
-import "./index.css"
+import "./index.css";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
   const [refferalDashboardData, setRefferalDashboardData] = useState(null);
   const [metrics, setMetrics] = useState([]);
   const [referral, setReferral] = useState({});
@@ -23,7 +20,7 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const token = Cookies.get("jwt_token");
-        console.log(token);
+        // console.log(token);
         const options = {
           method: "GET",
           headers: {
@@ -51,13 +48,17 @@ const Dashboard = () => {
     };
     fetchData();
   }, []);
-  console.log(refferalDashboardData);
+//   console.log(refferalDashboardData);
   return (
     <div className="main-bg">
       <Navbar />
       <div className="dashboard">
-        <h1 style={{fontSize:'24px',marginLeft:"6px"}}>Referral Dashboard</h1>
-        <p style={{fontSize:'14px',marginLeft:"6px"}}>Track your referrals, earnings and partner activity in one place</p>
+        <h1 style={{ fontSize: "24px", marginLeft: "6px" }}>
+          Referral Dashboard
+        </h1>
+        <p style={{ fontSize: "14px", marginLeft: "6px" }}>
+          Track your referrals, earnings and partner activity in one place
+        </p>
       </div>
       <Overview data={metrics} />
       <ServiceSummary data={serviceSummary} />

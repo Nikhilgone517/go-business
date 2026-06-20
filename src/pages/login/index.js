@@ -28,11 +28,11 @@ const Login = () => {
         options,
       );
       const data = await res.json();
-      console.log(data);
+    //   console.log(data);
       if (res.ok) {
         Cookies.set("jwt_token", data.data.token);
         const token = Cookies.get("jwt_token");
-        console.log(token);
+        // console.log(token);
         navigate("/", { replace: true });
       } else {
         setErrMsg(data.message || "Invalid Email or Password");
@@ -62,7 +62,9 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="btn">Sign In</button>
+          <button type="submit" className="btn">
+            Sign In
+          </button>
           {errMsg && <p>{errMsg}</p>}
         </form>
       </div>

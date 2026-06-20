@@ -21,7 +21,7 @@ const ReferralDetails = () => {
         },
       );
       const data = await response.json();
-      console.log(data);
+      //   console.log(data);
       if (response.ok) {
         setReferraldetails(data.data.referrals[0]);
       }
@@ -49,15 +49,27 @@ const ReferralDetails = () => {
         </div>
         <div className="ref-card">
           <h1>
-            {referraldetails.name} <span className="span-service-name">{referraldetails.serviceName}</span>
+            {referraldetails.name}{" "}
+            <span className="span-service-name">
+              {referraldetails.serviceName}
+            </span>
           </h1>
           <p className="activity">
             REFERRAL ID: <span className="span-ele">{referraldetails.id}</span>
           </p>
-          <p className="activity">NAME: <span className="span-ele">{referraldetails.name}</span></p>
-          <p className="activity">SERVICE NAME: <span className="span-ele">{referraldetails.serviceName}</span></p>
-          <p className="activity">DATE: <span className="span-ele">{referraldetails.date}</span></p>
-          <p className="activity">PROFIT: <span className="span-ele">{referraldetails.profit}</span></p>
+          <p className="activity">
+            NAME: <span className="span-ele">{referraldetails.name}</span>
+          </p>
+          <p className="activity">
+            SERVICE NAME:{" "}
+            <span className="span-ele">{referraldetails.serviceName}</span>
+          </p>
+          <p className="activity">
+            DATE: <span className="span-ele">{referraldetails.date}</span>
+          </p>
+          <p className="activity">
+            PROFIT: <span className="span-ele">{referraldetails.profit}</span>
+          </p>
         </div>
       </div>
     </>

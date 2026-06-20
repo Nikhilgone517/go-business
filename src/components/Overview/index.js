@@ -3,7 +3,7 @@ import "./index.css";
 
 const Overview = (props) => {
   const { data } = props;
-  console.log(data);
+//   console.log(data);
   return (
     <div className="overview">
       <h1 className="data-headings">Overview</h1>

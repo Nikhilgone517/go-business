@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -69,7 +69,7 @@ const AllReferrals = (props) => {
         {currentItems.map((eachData) => {
           return (
             <Link to={`referrals/${eachData.id}`}>
-              <li className="eachref" key={eachData.id}>
+              <li key={eachData.id} className="eachref">
                 <h1 className="ref-candidate">{eachData.name}</h1>
                 <h1 className="ref-candidate">{eachData.serviceName}</h1>
                 <h1 className="ref-candidate">{eachData.date}</h1>
@@ -81,7 +81,7 @@ const AllReferrals = (props) => {
       </ul>
       <div className="btns-div">
         <button
-        className="prev-btn"
+          className="prev-btn"
           disabled={currPage === 1}
           onClick={() => setCurrPage((prev) => prev - 1)}
         >
@@ -90,8 +90,8 @@ const AllReferrals = (props) => {
         <span className="page-no">
           {currPage}/{totalPages}
         </span>
-        <button 
-        className="nxt-btn"
+        <button
+          className="nxt-btn"
           disabled={currPage === totalPages}
           onClick={() => setCurrPage((prev) => prev + 1)}
         >
