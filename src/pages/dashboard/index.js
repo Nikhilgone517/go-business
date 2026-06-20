@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 import "./index.css";
 
 const Dashboard = () => {
-  const [refferalDashboardData, setRefferalDashboardData] = useState(null);
+//   const [refferalDashboardData, setRefferalDashboardData] = useState(null);
   const [metrics, setMetrics] = useState([]);
   const [referral, setReferral] = useState({});
   const [referrals, setReferrals] = useState([]);
@@ -34,7 +34,7 @@ const Dashboard = () => {
         const data = await res.json();
         // console.log(data);
         if (res.ok) {
-          setRefferalDashboardData(data.data);
+        //   setRefferalDashboardData(data.data);
           setMetrics(data.data.metrics);
           setReferral(data.data.referral);
           setReferrals(data.data.referrals);

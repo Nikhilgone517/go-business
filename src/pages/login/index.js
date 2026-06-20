@@ -31,7 +31,7 @@ const Login = () => {
     //   console.log(data);
       if (res.ok) {
         Cookies.set("jwt_token", data.data.token);
-        const token = Cookies.get("jwt_token");
+        // const token = Cookies.get("jwt_token");
         // console.log(token);
         navigate("/", { replace: true });
       } else {
