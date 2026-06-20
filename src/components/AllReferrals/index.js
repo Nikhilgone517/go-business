@@ -1,6 +1,5 @@
-import React, { use, useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
 import "./index.css";
 
 const AllReferrals = (props) => {
@@ -83,7 +82,7 @@ const AllReferrals = (props) => {
       <div className="btns-div">
         <button
         className="prev-btn"
-          disabled={currPage == 1}
+          disabled={currPage === 1}
           onClick={() => setCurrPage((prev) => prev - 1)}
         >
           Previous
