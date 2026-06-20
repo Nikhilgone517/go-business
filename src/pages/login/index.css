@@ -1,0 +1,30 @@
+.login-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.login-card{
+    border-radius: 10px;
+    border-color: d1d5bd;
+    display: flex;
+    flex-direction: column;
+
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+}
+.go-heading{
+    color: #407af8;
+}
+.btn{
+    background-color: #407af8;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 14px 8px 14px;
+    border: none;
+}

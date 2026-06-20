@@ -1,0 +1,21 @@
+.link-code-div{
+    display: flex;  
+    padding: 10px;
+    margin-left: 20px; 
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.code{
+    margin-left: 20px;
+}
+.link-input{
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #6c757d;
+    padding-left: 10px;
+    margin-right: 10px;
+}

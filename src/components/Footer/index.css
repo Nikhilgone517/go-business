@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-items{
+    margin: 10px;
+    color: #6c757d;
+    text-decoration: none;
+    list-style: none;
+}
